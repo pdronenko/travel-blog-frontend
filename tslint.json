@@ -76,15 +76,15 @@
       true,
       "as-needed"
     ],
+    "ordered-imports": false,
     "quotemark": [
       true,
       "single"
     ],
-    "semicolon": {
-      "options": [
-        "always"
-      ]
-    },
+    "semicolon": [
+      true,
+      "never"
+    ],
     "space-before-function-paren": {
       "options": {
         "anonymous": "never",
