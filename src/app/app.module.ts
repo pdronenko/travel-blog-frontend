@@ -6,7 +6,9 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { StoreModule } from '@ngrx/store'
-import { LayoutModule } from './modules/layout/layout.module'
+import { LayoutModule } from './modules/layout/layout.module';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment'
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { LayoutModule } from './modules/layout/layout.module'
     LayoutModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({}, {}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
