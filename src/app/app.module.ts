@@ -11,20 +11,25 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 import { environment } from '../environments/environment'
 import { EffectsModule } from '@ngrx/effects'
 import { StoreRouterConnectingModule } from '@ngrx/router-store'
+import { appReducers, metaReducers, APP_EFFECTS } from './store'
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    LayoutModule,
     BrowserAnimationsModule,
+    BrowserModule,
+    EffectsModule.forRoot(APP_EFFECTS),
     HttpClientModule,
-    StoreModule.forRoot({}, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([]),
+    LayoutModule,
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      name: 'NgRx Hiking DevTools',
+      logOnly: environment.production
+    }),
+    StoreModule.forRoot(appReducers, { metaReducers }),
     StoreRouterConnectingModule.forRoot()
   ],
   providers: [],
