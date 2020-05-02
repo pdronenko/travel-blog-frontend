@@ -1,7 +1,13 @@
 export enum ERoutes {
   // AUTH
-  LOGIN = 'login',
+  LOGIN = '/login',
 
-  // BLOG
-  BLOG = 'trails'
+  // PAGES
+  MAIN_PAGE = '',
+
+  // TRAILS
+  TRAILS_LIST = '/trails',
+  VIEW_TRAIL = '/trails/:id',
+  ADD_TRAIL = '/trails/add',
+  EDIT_TRAIL = '/trails/edit/:id'
 }

@@ -1,0 +1,19 @@
+@import src/assets/styles/core
+
+.trails-list
+  &__cards
+    display: grid
+    grid-template-columns: 1fr
+    gap: rem(20)
+
+    @include screen-small
+      grid-template-columns: 1fr 1fr
+
+    @include screen-medium
+      grid-template-columns: 1fr 1fr 1fr
+
+    @include screen-large
+      grid-template-columns: 1fr 1fr 1fr 1fr
+
+    @include screen-extra-large
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr

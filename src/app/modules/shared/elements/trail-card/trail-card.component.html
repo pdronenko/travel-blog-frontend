@@ -1,0 +1,13 @@
+<mat-card class="trail-card">
+  <mat-card-header>
+    <mat-card-title>{{trailPreview.name}}</mat-card-title>
+    <mat-card-subtitle>{{trailPreview.date | date:'longDate'}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="trailPreview.imgUrl" [alt]="trailPreview.name">
+  <mat-card-content>
+    <p>{{trailPreview.pretext}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button color="primary">READ MORE</button>
+  </mat-card-actions>
+</mat-card>

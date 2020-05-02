@@ -1,0 +1,15 @@
+<mat-card class="login">
+  <form class="login__form" [formGroup]="form" (ngSubmit)="submit()">
+    <mat-form-field class="login__field" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input type="email" formControlName="email" matInput placeholder="Enter email" required>
+      <mat-icon matSuffix>email</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="login__field" appearance="outline">
+      <mat-label>password</mat-label>
+      <input type="password" formControlName="password" matInput placeholder="Enter password" required>
+      <mat-icon matSuffix>vpn_key</mat-icon>
+    </mat-form-field>
+    <button type="submit" class="login__btn" mat-flat-button color="primary" [disabled]="form.invalid">Login</button>
+  </form>
+</mat-card>

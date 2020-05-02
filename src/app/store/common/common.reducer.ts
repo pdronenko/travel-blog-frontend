@@ -4,7 +4,7 @@ import * as commonActions from './common.action'
 import { IAppState } from '..'
 
 export class CommonState {
-  loading = true
+  loading = false
   success = false
   error: HttpErrorResponse = null
 }

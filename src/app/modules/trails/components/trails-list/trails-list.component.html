@@ -1,0 +1,3 @@
+<section class="trails-list__cards" *ngIf="(trailPreviews$ | async) as trailPreviews">
+  <app-trail-card *ngFor="let trailPreview of trailPreviews" [trailPreview]="trailPreview"></app-trail-card>
+</section>

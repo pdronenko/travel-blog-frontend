@@ -1,3 +1,24 @@
-<mat-toolbar color="primary">
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between center" color="primary">
   <span>Trails blog</span>
+  <section>
+    <button [routerLink]="ERoutes.MAIN_PAGE" mat-icon-button color="secondary">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button [routerLink]="ERoutes.TRAILS_LIST" mat-icon-button color="secondary">
+      <mat-icon>terrain</mat-icon>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>person</mat-icon>
+    </button>
+  </section>
 </mat-toolbar>
+<mat-progress-bar [@toggleProgressBar]="(loading$ | async) ? 'visible' : 'hidden'" color="primary" mode="indeterminate"></mat-progress-bar>
+<mat-menu #menu="matMenu">
+  <button [routerLink]="ERoutes.LOGIN" mat-menu-item>
+    <mat-icon>input</mat-icon>
+    <span>Login</span>
+  </button>
+  <button mat-menu-item>
+    <span>Logout</span>
+  </button>
+</mat-menu>
