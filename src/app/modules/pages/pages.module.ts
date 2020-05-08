@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { MainPageComponent } from './components/main-page/main-page.component'
 import { LoginComponent } from './components/login/login.component'
-import { SharedModule } from '../shared/shared.module'
+import { MainPageComponent } from './components/main-page/main-page.component'
+import { NgModule } from '@angular/core'
 import { ReactiveFormsModule } from '@angular/forms'
+import { SharedModule } from '../shared/shared.module'
 
 @NgModule({
   declarations: [MainPageComponent, LoginComponent],

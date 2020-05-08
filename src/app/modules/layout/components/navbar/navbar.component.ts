@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core'
-import { Observable } from 'rxjs'
 import { Store, select } from '@ngrx/store'
+
+import { ERoutes } from 'src/app/core/enums/routes.enum'
 import { IAppState } from 'src/app/store'
+import { Observable } from 'rxjs'
 import { getCommonState } from 'src/app/store/common/common.reducer'
 import { map } from 'rxjs/operators'
 import { toggleProgressBar } from '../../animations/toggleProgressBar.animation'
-import { ERoutes } from 'src/app/core/enums/routes.enum'
 
 @Component({
   selector: 'app-navbar',

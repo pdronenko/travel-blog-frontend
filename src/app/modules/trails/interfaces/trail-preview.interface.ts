@@ -3,5 +3,5 @@ export interface ITrailPreview {
   id: number
   date: string
   pretext: string
-  imgUrl: string
+  mainImgUrl: string
 }

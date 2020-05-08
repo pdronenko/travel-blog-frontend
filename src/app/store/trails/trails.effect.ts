@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { Actions, createEffect, ofType } from '@ngrx/effects'
+import { Actions, ofType, Effect } from '@ngrx/effects'
 import { loadTrailPreviews, loadTrailPreviewsEnd } from './trails.action'
 import { BlogService } from 'src/app/modules/trails/services/blog.service'
 import { mergeMap, map, catchError, tap } from 'rxjs/operators'
@@ -10,8 +10,8 @@ import { loading, loadingSuccess, loadingError } from '../common/common.action'
 
 @Injectable()
 export class TrailsEffects {
-
-  loadTrailPreviews$ = createEffect(() => this.actions$.pipe(
+  @Effect()
+  loadTrailPreviews$ = this.actions$.pipe(
     ofType(loadTrailPreviews.type),
     tap(() => this.store.dispatch(loading())),
     mergeMap(() => this.blogService.getTrails()
@@ -24,7 +24,6 @@ export class TrailsEffects {
         })
       ))
     )
-  )
 
   constructor(
     private actions$: Actions,
