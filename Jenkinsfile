@@ -4,6 +4,9 @@ pipeline {
       image 'node:lts-alpine'
     }
   }
+  environment {
+    HOME="."
+  }
   stages {
     stage('install deps') {
       steps {
