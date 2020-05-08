@@ -1,0 +1,1 @@
+JENKINS_ARGS="--webroot=/var/cache/$NAME/war --prefix=/jenkins/ --httpPort=$HTTP_PORT"
