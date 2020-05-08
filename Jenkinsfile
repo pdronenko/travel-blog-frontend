@@ -5,6 +5,11 @@ pipeline {
     }
   }
   stages {
+    stage('install deps') {
+      steps {
+        sh 'npm install'
+      }
+    }
     stage('Run linter') {
       steps {
         sh 'npm run lint'
