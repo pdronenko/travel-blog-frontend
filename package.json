@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "cypress open"
+    "e2e": "start-server-and-test start http://localhost:4200 cypress open",
+    "e2e:headless": "cypress run --headless",
+    "e2e:ci": "start-server-and-test start http://localhost:4200 e2e:headless"
   },
   "private": true,
   "dependencies": {
@@ -41,6 +43,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
+    "concurrently": "^5.2.0",
     "cypress": "^4.4.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -51,6 +54,7 @@
     "karma-jasmine-html-reporter": "^1.4.2",
     "ngrx-store-freeze": "^0.2.4",
     "protractor": "~5.4.3",
+    "start-server-and-test": "^1.11.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
