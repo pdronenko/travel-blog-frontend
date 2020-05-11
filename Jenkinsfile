@@ -1,3 +1,4 @@
+// Linter
 pipeline {
   agent {
     docker {
@@ -8,7 +9,7 @@ pipeline {
     HOME="."
   }
   stages {
-    stage('install deps') {
+    stage('install dependencies') {
       steps {
         sh 'npm install'
       }
@@ -16,11 +17,6 @@ pipeline {
     stage('Run linter') {
       steps {
         sh 'npm run lint'
-      }
-    }
-    stage('Run e2e tests') {
-      steps {
-        sh 'npm run e2e:ci'
       }
     }
   }
