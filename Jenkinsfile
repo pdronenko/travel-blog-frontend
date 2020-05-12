@@ -9,12 +9,12 @@ pipeline {
     HOME="."
   }
   stages {
-    stage('Install dependencies') {
+    stage('Install dependencies PROD') {
       steps {
         sh 'npm install'
       }
     }
-    stage('Run linter') {
+    stage('Run linter PROD') {
       steps {
         sh 'npm run lint'
       }
