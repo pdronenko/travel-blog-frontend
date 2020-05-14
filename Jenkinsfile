@@ -9,7 +9,7 @@ pipeline {
     HOME="."
   }
   stages {
-    stage('Install dependencies PROD') {
+    stage('Install dependencies 2PROD') {
       steps {
         sh 'npm install'
       }
