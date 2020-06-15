@@ -1,6 +1,7 @@
 # Travel Blog Frontend
 
 Preview: http://ec2-18-219-157-157.us-east-2.compute.amazonaws.com/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
 ## Development server
